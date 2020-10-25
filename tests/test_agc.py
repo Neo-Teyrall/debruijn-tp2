@@ -107,9 +107,18 @@ def test_get_identity():
 def test_detect_chimera():
     # best:
     # 1 , 1, 1, 0
-    assert(not detect_chimera([[73.58, 73.79], [72.97, 77.06], [77.36, 80.58], [78.43, 78.43]]))
-    assert(not detect_chimera([[62.6, 94.17], [62.6, 94.17], [62.6, 94.17], [62.6, 94.17]]))
-    assert(detect_chimera([[98.0, 60.0], [100.0, 65.0], [100.0, 63.0], [64.0, 100.0]]))
+    assert(not detect_chimera([[73.58, 73.79],
+                               [72.97, 77.06],
+                               [77.36, 80.58],
+                               [78.43, 78.43]]))
+    assert(not detect_chimera([[62.6, 94.17],
+                               [62.6, 94.17],
+                               [62.6, 94.17],
+                               [62.6, 94.17]]))
+    assert(detect_chimera([[98.0, 60.0],
+                           [100.0, 65.0],
+                           [100.0, 63.0],
+                           [64.0, 100.0]]))
     S000387216 = "GGAGGCTCGTACCGCTGTCTTGTTAAGGACTGGTTTTTTACTGTCTATACAGACTCTTCATACTACTGGATATCCTGATATGCGTTCGGATCGATTGTTGCCGTACGCTGTGTCGATTAAAGGTAATCATAAGGGCTTTCGACTTACGACTC"
     chimera_AJ007403 = "AAGACGCTTGGGTTTCACTCCTGCGCTTCGGCCGGGCCCGGCACTCGCCACAGTCTCGAGCGTCGTCTTGATGTTCACATTGCGTTCGGATCGATTGTTGCCGTACGCCTGTGTCATTAAAGGTAATCATAAGGGCTTTCGACTTACGACTC"
     S000001688 = "AAGACGCTTGGGTTTCACTCCTGCGCTTCGGCCGGGCCCGGCACTCGCCACAGTCTCGAGCGTCGTCTTGATGTTCACATGTAACGATCGCTTCCAACCCATCCGGTGCTGTGTCGCCGGGCACGGCTTGGGAATTAACTATTCCCAAGTCT"
